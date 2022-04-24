@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
+
 <head>
 
     <!-- Meta tags -->
@@ -9,73 +11,202 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/style.css">
 
 
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 
     <script src="https://d3js.org/d3.v5.js"
-			integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
-			crossorigin="anonymous"></script>
+        integrity="sha384-qbNa7U27VV0Cghe/43y8zEMkmA5M4VxV6MI0k0vdVJKTrBoT2SnBqwccpD0vX+Is"
+        crossorigin="anonymous"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!--*******************************************-->
+    <!--***** IMPORT EXTERNAL JAVASCRIPT CODE *****-->
+
+    <script src="js/index.js"></script>
+    <script src="js/bar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <!--*******************************************-->
 
 
-    <title>CAP 4744/5745 - Interactive Data Visualization - Project 3</title>
+    <title>CAP 4744/5745 - Interactive Data Visualization - Project 2</title>
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">Project 3: Tara Nourivandi
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">your namespan>
-    your namebutton>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="calvin.html">Calvin College 2004</a></li> 
-            <li class="nav-item"><a class="nav-link" href="iris.html">Iris Dataset</a></li>
-            <li class="nav-item"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
-            <!-- <li class="nav-item"><a class="nav-link" href="wb_st.html">World Bank Data, Science and Technology</a></li> -->
-        </ul>
-    </div>
-</nav>
-
-
-<div class="page">
-
-    <h1>CAP 4744/5745 - Interactive Data Visualization</h1>
-    <h2>Project 3</h2>
-    <h2>Tara Nourivandi</h2>
-
-    <div>
-        <div style="display: inline-block; text-align: center; margin-right: 30px;">
-            <a href="calvin.html"><img src="images/calvin.jpg" height="225" alt=""/></a><br>
-            <a href="calvin.html" style="font-size: 16px;">Calvin College 2004 Dataset<br></a>
-        </div>
-        <div style="display: inline-block; text-align: center; margin-right: 30px;">
-            <a href="iris.html"><img src="images/iris.png" height="225" alt=""/></a><br>
-            <a href="iris.html" style="font-size: 16px;">Iris Dataset</a>
-        </div>
-    </div>
-    <div style="margin-top: 30px;">
-        <div style="display: inline-block; text-align: center; margin-right: 30px;">
-            <a href="titanic.html"><img src="images/titanic.jpg" height="225" alt=""/></a><br>
-            <a href="titanic.html" style="font-size: 16px;">Titanic Passenger List Dataset</a>
-        </div>
-        <!-- <div style="display: inline-block; text-align: center; margin-right: 30px;">
-            <a href="wb_st.html"><img src="images/wb.jpg" height="225" alt=""/></a><br>
-            <a href="wb_st.html" style="font-size: 16px;">World Bank Data, Science and Technology Dataset</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Project 4: Tara Nourivandi</a>
+        <!--         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="iris.html">Iris Dataset</a></li>
+                <li class="nav-item"><a class="nav-link" href="calvin.html">Calvin Dataset</a></li>
+                <li class="nav-item active"><a class="nav-link" href="titanic.html">Titanic Passenger List</a></li>
+            </ul>
         </div> -->
-    </div>
+    </nav>
 
-</div>
+    <div class="page">
+
+        <h1>Iran immigrations in 2000-2019 </h1>
+
+        <h3 align="center" style="font-size:140%;">Iranian inflows and outflows over the years</h3>
+        <div align="center">
+            <svg id="vis_1_left" name="vis_1_left" class="default_svg"></svg>
+        </div>
+        <div>
+
+            <h3 align="center" style="font-size:140%;" stye="margin-top: 50px;">Iranian inflows and outflows over the
+                years</h3>
+            <div align="center">
+                <button class="button" onclick="update(2000);update(2000)">2000</button>
+                <button class="button" onclick="update(2001);update(2001)">2001</button>
+                <button class="button" onclick="update(2002);update(2002)">2002</button>
+                <button class="button" onclick="update(2003);update(2003)">2003</button>
+                <button class="button" onclick="update(2004);update(2004)">2004</button>
+                <button class="button" onclick="update(2005);update(2005)">2005</button>
+                <button class="button" onclick="update(2006);update(2006)">2006</button>
+                <button class="button" onclick="update(2007);update(2007)">2007</button>
+                <button class="button" onclick="update(2008);update(2008)">2008</button>
+                <button class="button" onclick="update(2009);update(2009)">2009</button>
+                </div>
+                <div align="center">
+                <button class="button" onclick="update(2010);update(2010)">2010</button>
+                <button class="button" onclick="update(2011);update(2011)">2011</button>
+                <button class="button" onclick="update(2012);update(2012)">2012</button>
+                <button class="button" onclick="update(2013);update(2013)">2013</button>
+                <button class="button" onclick="update(2014);update(2014)">2014</button>
+                <button class="button" onclick="update(2015);update(2015)">2015</button>
+                <button class="button" onclick="update(2016);update(2016)">2016</button>
+                <button class="button" onclick="update(2017);update(2017)">2017</button>
+                <button class="button" onclick="update(2018);update(2018)">2018</button>
+                <button class="button" onclick="update(2019);update(2019)">2019</button>
+            </div>
+            <div align="center">
+                <svg id="vis_1_right" name="vis_1_right" class="default_svg"></svg>
+            </div>
+
+            <h3 align="center" style="font-size:140%;">Iranian men and women inflow by country in 2019</h3>
+            <div align="center"><svg id="vis_2" name="vis_2" class="default_svg"></svg></div>
+
+
+            <h3 style="font-size:140%;" align="center">Top five contries with most Iranian inflows in 5-year persiods</h3>
+            <div align="center"><svg id="vis_3" name="vis_3" class="default_svg"></svg></div>
+
+        </div>
+
+
+        <script>
+
+            /*************************************************/
+            /* EXAMPLE CODE FOR LOADING AND VISUALIZING DATA */
+
+            let data = null;
+            let baaarData = null;
+            let vis_1_left = null;
+            let vis_1_right = null;
+            let vis_2 = null;
+            let vis_3 = null;
+            let vis_4 = null;
+
+
+            baaarSVG = d3.select("#vis_1_right")
+            var x = d3.scaleBand()
+                .range([50, width])
+                .padding(0.2);
+            var xAxis = baaarSVG.append("g")
+                .attr("transform", "translate(0," + height + ")")
+
+            // Initialize the Y axis
+            var y = d3.scaleLinear()
+                .range([height, 50]);
+            var yAxis = baaarSVG.append("g")
+                .attr("class", "myYaxis")
+                .attr("transform", "translate(50,0)")
+
+
+            update(2000)
+            update(2000)
+            d3.csv("data/year.csv", (row, i) => {
+                return {
+                    year: d3.timeParse("%Y")(row.year),
+                    year_for_plot: +row.year,
+                    inflow: +row.inflow,
+                    outflow: +row.outflow,
+
+                };
+            }).then(rows => {
+                //console.log(rows)
+                data = rows;
+                vis_1 = viz_1("#vis_1_left", data, "year", "year_for_plot", "inflow", "outflow")
+            }).catch(error => {
+                console.log(error);
+            });
+
+
+
+
+
+            d3.csv("data/2019.csv", (row, i) => {
+                return {
+                    country: row.country,
+                    men: +row.men,
+                    women: +row.women,
+
+
+                };
+            }).then(rows => {
+                data = rows;
+                //console.log(data)
+
+                vis_1 = viz_2("#vis_2", data, "country")
+            }).catch(error => {
+                console.log(error);
+            });
+
+
+
+            d3.csv("data/third_viz_data - Copy.csv", (row, i) => {
+                return {
+                    year: row.year,
+                    c1: row.c1,
+                    v1: +row.v1,
+                    c2: row.c2,
+                    v2: +row.v2,
+                    c3: row.c3,
+                    v3: +row.v3,
+                    c4: row.c4,
+                    v4: +row.v4,
+                    c5: row.c5,
+                    v5: +row.v5,
+                    total: +row.total,
+
+                };
+            }).then(rows => {
+                //console.log(rows)
+                data = rows;
+                vis_3 = viz_3("#vis_3", data, "year", "c1", "v1", "c2", "v2", "c3", "v3", "c4", "v4", "c5", "v5", "total")
+
+
+            }).catch(error => {
+                console.log(error);
+            });
+
+        </script>
+
 </body>
+
 </html>
